@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>energy_resource</title>
+    <style>
+       *{
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+            box-sizing: border-box;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+        
+            background: #080808;
+            color: black;
+        }
+        
+        #header{
+            width: 100%;
+            height: 100vh;
+            background-image: url('https://previews.123rf.com/images/sasha85ru/sasha85ru2002/sasha85ru200200023/142549600-energy-efficiency-concept-of-led-lamps-decrease-in-electricity-consumption.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .container{
+            padding: 10px 10%;
+        
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        nav ul li{
+            display: inline-block;
+            list-style: none;
+            margin: 10px 20px;
+        }
+        nav ul li a{
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+            position: relative;
+        }
+        nav ul li a::after{
+            content: '';
+            width: 0;
+            height: 3px;
+            background: #ff004f;
+            position:absolute;
+            left: 0;
+            bottom: -6px;
+            transition: 0.5s;
+        }
+        nav ul li a:hover::after{
+            width: 100%;
+        }
+        .header-text{
+            margin-top: 20%;
+            font-size: 30px;
+            text-align: center;
+        }
+        .header-text h1{
+            font-size: 60px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .header-text h1 span{
+            color: #ff004f;
+        }
+        .button{
+            height: 40px;
+            width: 120px;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+            margin-left: 30px;
+            align-items: flex-end;
+        }
+       
+            
+       
+     </style>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1>ENERGYINTEL</h1>
+                <ul id="sidemenu">
+                        <li><a href="#header">HOME</a></li>
+                        <li><a href="#ABOUT">ABOUT</a></li>
+                        <li><a href="#CONTACT">CONTACT</a></li>
+                        <button class="button">INSPECT</button>
+                        
+                
+                    </nav>
+                    <div class="header-text">
+                        <h1>A Reliable Energy <br>Consumption Analysis<br> System for energy-<br>Efficient Appliances</h1>
+                        <h1 style="color: green;">Global Active Power is:</h1>
+                        <h1 style="color:green;">{{output}} Watt</h1>
+                    </div>
+                    
+    
+        
+</body>
+</html>

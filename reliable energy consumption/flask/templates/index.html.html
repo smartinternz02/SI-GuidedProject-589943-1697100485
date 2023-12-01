@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>energy_resource</title>
+    <style>
+       *{
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+            box-sizing: border-box;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+        
+            background: #080808;
+            color: black;
+        }
+        
+        #header{
+            width: 100%;
+            height: 100vh;
+            background-image: url('https://previews.123rf.com/images/sasha85ru/sasha85ru2002/sasha85ru200200023/142549600-energy-efficiency-concept-of-led-lamps-decrease-in-electricity-consumption.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .container{
+            padding: 10px 10%;
+        
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        nav ul li{
+            display: inline-block;
+            list-style: none;
+            margin: 10px 20px;
+        }
+        nav ul li a{
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+            position: relative;
+        }
+        nav ul li a::after{
+            content: '';
+            width: 0;
+            height: 3px;
+            background: #ff004f;
+            position:absolute;
+            left: 0;
+            bottom: -6px;
+            transition: 0.5s;
+        }
+        nav ul li a:hover::after{
+            width: 100%;
+        }
+        .header-text{
+            margin-top: 20%;
+            font-size: 30px;
+            text-align: center;
+        }
+        .header-text h1{
+            font-size: 60px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .header-text h1 span{
+            color: #ff004f;
+        }
+        .button{
+            height: 40px;
+            width: 120px;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+            margin-left: 30px;
+            align-items: flex-end;
+        }
+        #ABOUT{
+          padding: 80px 0;
+          color: black;
+          background-color: white;
+        }
+        .row{
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+         }
+        .ABOUT-col-1{
+          flex-basis: 35%;
+        }
+        .ABOUT-col-1 img{
+           width: 90%;
+           
+           height: 110%;
+        }
+        .ABOUT-col-2{
+          flex-basis: 60%;
+          padding-top: 80px;
+          font-size: large
+        }
+        #CONTACT{
+          padding: 80px 0;
+          color: black;
+          background-color: white;
+        }
+        .contact-left{
+           flex-basis: 35%;
+        }
+        .contact-left{
+            flex-basis: 35%;
+        }
+        .contact-right{
+         flex-basis: 60%;
+        }
+        .contact-left p{
+          margin-top: 10px;
+        }
+        .contact-right p{
+           color: #ff004f;
+           margin-right: 15px;
+           font-size: 25px;
+        }
+        .btn.btn2 {
+            height: 40px;
+            width: 120px;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+            margin-left: 30px;
+            align-items: flex-end;
+        }
+        .contact-right form{
+           width: 100%;
+        }
+        form input, form textarea{
+           width: 100%;
+           border: 0;
+           outline: none;
+           background: azure;
+           padding: 15px;
+           margin: 15px 0;
+           color: black;
+           font-size: 18px ;
+            border-radius: 6px;
+        }
+        form btn2{
+           padding: 14px 60px;
+           font-size: 18px;
+           margin-top: 20px;
+           cursor: pointer;
+        }
+            
+       
+     </style>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1>ENERGYINTEL</h1>
+                <ul id="sidemenu">
+                        <li><a href="#header">HOME</a></li>
+                        <li><a href="#ABOUT">ABOUT</a></li>
+                        <li><a href="#CONTACT">CONTACT</a></li>
+                        <li><form action="{{ url_for('inspect')}}" method="post">
+                            <button class="button" href="templates/inspect.html">INSPECT</button>
+                        </form></li>
+                        
+                
+            </nav>
+            <div class="header-text">
+                <h1>A Reliable Energy <br>Consumption Analysis<br> System for energy-<br>Efficient Appliances</h1>
+            </div>
+        </div>
+    </div>
+    <div id="ABOUT">
+        <div class="container">
+            <div class="row">
+                <div class="ABOUT-col-1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5NtC2bb-SSPaWBsWm014UrD789ti6vvU_PXiNFbAm9Nr76TbWwlUVwCI3S7bOc2NFDqI&usqp=CAU">
+                </div>
+                <div class="ABOUT-col-2">
+                    <h3>Power consumption analysis for households is an ML project that involves using machine learning algorithms to analyse and predict the energy consumption patterns of residential buildings. The goal of this project is to help homeowners and utility companies better manage their energy usage, reduce waste, and lower costs. The project involves collecting data on energy consumption and related factors such as weather, time of day, and occupancy. This data is then used to train machine learning models to make accurate predictions of future energy consumption basebon these factors. The models can be used to identify patterns in energy usage and make recommendations for ways to reduce energy waste and improve efficiency. Overall, power consumption analysis for households is an important application of machine learning that has the potential to make a significant impact on energy usage and sustainability.
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="CONTACT">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">CONTACT US</h1><br>
+                    <h3> <i class="fa-solid fa-location-dot"></i> Location:</h3>
+                    <p>The smartBridge,Survey no.91,Sundarayya Vignana kendram,Technical Block,6th floor, MadhavaReddyColony,Gachibowli,Hyderabad,<br>Telangana,500032</p><br>
+                    <h3> <i class="fa-solid fa-paper-plane"></i>Email:</h3>
+                    <p>info@thesmartbridge.com</p><br>
+                    <h3> <i class="fa-solid fa-square-phone"></i>Call:</h3>
+                    <p> +91 6304320044</p><br>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="your Name" required>
+                        <input type="email" name="Email" placeholder="your Email" required>
+                        <input type="subject" name="Subject" placeholder="Subject" required>
+                        <textarea name="Message" rows="6" placeholder=" Message"></textarea>
+                        <button type="submit" class="btn btn2">Send Message</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+</body>
+</html>
